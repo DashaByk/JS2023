@@ -27,7 +27,7 @@ console.log(c.toLowerCase());
 
 // - Є "брудна" стрінга let str = ' dirty string   ' . Почистити її від зайвих пробілів.
 let str = ' dirty string   ';
-console.log(str.replaceAll(' ', ''));
+console.log(str.trim(' ', ''));
 
 // - Напишіть функцію stringToarray(str), яка перетворює рядок на масив слів.
 //     let str = 'Ревуть воли як ясла повні';
@@ -40,9 +40,9 @@ let arr = stringToarray(str1);
 console.log(arr);
 
 // - є масив чисел [10,8,-7,55,987,-1011,0,1050,0] . за допомоги map  перетворити всі об'єкти в масиві на стрінгові.
-// let arr1 = [10,8,-7,55,987,-1011,0,1050,0];
-// let string = arr1.map(value => !!!)
-// console.log(string);
+let arr1 = [10,8,-7,55,987,-1011,0,1050,0];
+let string = arr1.map(value => value + '')
+console.log(string);
 
 // - створити функцію sortNums(direction), яка прймає масив чисел, та сортує його від більшого до меньшого, або навпаки в залежності від значення аргументу direction.
 //     let nums = [11,21,3];
@@ -266,7 +266,7 @@ let cards =[
     },
 ]
 // - знайти піковий туз
-let ace = cards.filter(x => x.value === 'ace' && x.cardSuit === 'spade');
+let ace = cards.find(x => x.value === 'ace' && x.cardSuit === 'spade');
 console.log(ace);
 // - всі шістки
 let sixs = cards.filter(x => x.value === '6');
@@ -279,7 +279,7 @@ let clubs = cards.filter(x => x.cardSuit === 'clubs');
 console.log(clubs);
 // - всі трефи від 9 та більше
 let diamond = cards.filter(x => x.cardSuit === 'diamond' && x.value >= '9');
-console.log(clubs);
+console.log(diamond);
 
 //     Взяти описану колоду карт, та за допомоги reduce упакувати всі карти по "мастях" в об'єкт
 // {
@@ -376,5 +376,5 @@ let coursesArray = [
 // let sass = coursesArray.filter(value => value.modules === 'sass');
 // console.log(sass);
 // --написати пошук всіх об'єктів, в який в modules є docker
-// let docker = coursesArray.filter(value => value.modules === ['docker']);
+// let docker = coursesArray.filter(value => selectedModules.includes(value.modules));
 // console.log(docker);

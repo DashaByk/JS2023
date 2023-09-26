@@ -25,10 +25,9 @@ while (x < 20) {
 // - Використовуючи данні з масиву, за допомоги document.write та циклу
 // побудувати структуру по шаблону
 let listOfItems = ['html', 'css', 'javascript', 'mysql', 'mongodb', 'react', 'angular', 'node.js'];
+document.write(`<ul></ul>`)
 for (const listOfItem of listOfItems) {
-    document.write(` <ul>
-         <li>${listOfItem}</li>
-    </ul>`)
+    document.write(`<li>${listOfItem}</li>`)
 }
 
 //     Використовуючи данні з масиву, за допомоги document.write та циклу
